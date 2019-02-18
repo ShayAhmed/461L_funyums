@@ -1,2 +1,13 @@
-# 461L_funyums
-temporary location fo funyums for my team to use
+Run Frontend
+    Make sure you have node js and angular installed
+    run cmd:
+        cd UI
+        npm run ng serve --opne
+    might need to run:
+        cd UI
+        npm install
+
+Run Backend
+    Make sure you hav python, flask, flask restplus installed
+    run cmd:
+        python main.py OR pymain.py 
