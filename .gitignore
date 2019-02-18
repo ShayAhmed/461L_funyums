@@ -1,8 +1,8 @@
 # IDE - VSCode
-.vs/
+/.vs
 
 # dependencies
-UI/node_modules
+/UI/node_modules
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
