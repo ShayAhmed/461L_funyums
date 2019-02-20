@@ -4,6 +4,7 @@ from werkzeug.contrib.fixers import ProxyFix
 from resources.addnamespaces import add_all_namespaces
 from .blueprint import all_blueprints
 from importlib import import_module
+from flask_cors import CORS
 
 
 
@@ -19,7 +20,9 @@ def hello_world():
 
 def create_app(): #creates flask app
     print("inside create_app")
+    
     app.wsgi_app = ProxyFix(app.wsgi_app)#setup thing, dont worry about it
+    cors = CORS(app, resources={r"/*": {"origins": "*"}})#needed for cross origin stuff -> used to allow data transfer between frontend and backend
     retgister_blueprints(app) #adds blueprint to app
     return app
 

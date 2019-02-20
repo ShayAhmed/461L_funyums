@@ -16,11 +16,12 @@ export class HelloComponent implements OnInit {
   }
   gethellodata(){
     this.helloService.getHello().subscribe((data:any) => {//data:any is what is returned
-      this.hello = data;
+      this.hello = data['hello'];
       console.log('Data requested ... ');
       console.log(this.hello);
     });
-    console.log("got data"+this.hello)
+    console.log("got data "+this.hello)
+
     
   }
 
